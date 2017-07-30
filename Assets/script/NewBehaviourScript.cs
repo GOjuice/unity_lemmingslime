@@ -5,7 +5,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("유니티 연동 완료");
+		Debug.Log ("유니티 연동 완료  2  ");
 	}
 	
 	// Update is called once per frame
