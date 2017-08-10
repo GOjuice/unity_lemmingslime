@@ -55,8 +55,7 @@ public class TouchControl : MonoBehaviour
 
             Debug.Log (hit.collider.name);
 
-            target = hit.collider.gameObject;  //히트 된 게임 오브젝트를 타겟으로 지정
-
+            target = hit.collider.gameObject;//히트 된 게임 오브젝트를 타겟으로 지정
         }
 
     }
