@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TouchControl : MonoBehaviour
 {
@@ -54,8 +55,14 @@ public class TouchControl : MonoBehaviour
         { //히트되었다면 여기서 실행
 
             Debug.Log (hit.collider.name);
-
-            target = hit.collider.gameObject;//히트 된 게임 오브젝트를 타겟으로 지정
+			try {
+				target = hit.collider.gameObject;
+				target.GetComponentInParent<Slime_Core>().SlimeJump();
+			}       
+			catch (NullReferenceException ex) {
+				Debug.Log("오류");
+			}
+            //히트 된 게임 오브젝트를 타겟으로 지정
         }
 
     }
